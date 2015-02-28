@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+<head>
+ <title>勉強会 2015年02月</title>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+ <script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+
+<!-- 課題1 -->
+<section>
+ <h1>課題1</h1>
+ Ajax通信を実装してください<br>
+ <textarea id="test_1"></textarea><br>
+ <input type="button" id="test_1_button" value="実行" />
+</section>
+<hr />
+
+<!-- 課題2 -->
+<section>
+ <h1>課題2</h1>
+ Jqueryを用いた、Ajax通信を実装してください<br>
+ <textarea id="test_2"></textarea><br>
+ <input type="button" id="test_2_button" value="実行" />
+</section>
+<hr />
+
+<!-- 課題3 -->
+<section>
+ <h1>課題3</h1>
+ 以下の入力欄にJqueryを用いて、値を設定してください <br>
+ <textarea id="test_3"></textarea><br>
+ <input type="button" id="test_3_button" value="実行" />
+
+ <!-- 設定対象 -->
+ <h2>設定対象</h2>
+ <div id="test_3_target">
+	 1:<input type="text" id="test_3_target_1" /><br>
+	 2:<input type="text" name="test_3_target_2" /><br>
+	 3:<input type="text" class="test_3_target_3" /><br>
+	 4:<input type="text" /><br>
+	 5:<input type="text" ref="test_3_target_4" /><br>
+  <div>
+	  6:<input type="text" /><br>
+  </div>
+  7:<input type="text" /><br>
+ </div>
+</section>
+<hr />
+
+<!-- 課題4 -->
+<section>
+ <h1>課題4</h1>
+ JsonData(test_4_json)を用いてTable(id=test_4_table)を作成してください<br>
+ <textarea id="test_4"></textarea><br>
+ <input type="button" id="test_4_button" value="実行" />
+ <table id="test_4_table">
+ </table>
+</section>
+
+<script type="text/javascript">
+   $(function() {
+			$("textarea").attr("rows", "5").attr("cols", "60");
+
+		   $("#test_1_button").on("click", function(){
+				var data = $('#test_1').val();
+				console.log('test_1:' + data);
+				eval(data);
+			});
+
+		   $("#test_2_button").on("click", function(){
+				var data = $('#test_2').val();
+				console.log('test_2:' + data);
+				eval(data);
+			});
+		   
+		   $("#test_3_button").on("click", function(){
+				var data = $('#test_3').val();
+				console.log('test_3:' + data);
+				eval(data);
+			});
+		  
+		   var test_4_json = [ {locate:"東京"}, {locate:"大阪"}, {locate:"愛知"} ];
+		   $("#test_4_button").on("click", function(){
+				var data = $('#test_4').val();
+				console.log('test_4:' + data);
+				eval(data);
+			});
+	});
+ </script>
+</body>
+</html>
